@@ -1,11 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body>
+    <div class="main-container">
+      <header>
+        <div class="data">
+          <div class="title">
+            <h1>Presupuesto de</h1>
+            <div>
+              <h1>Julio 2020</h1>
+            </div>
+          </div>
+          <div class="amount">
+            <h1>+500.00</h1>
+          </div>
+          <div class="record">
+            <div class="ingresos box-negative">
+              <p>Ingresos:</p>
+              <p>+800.00</p>
+            </div>
+            <div class="egresos box-positive">
+              <p>Egresos:</p>
+              <p>-300.00</p>
+            </div>
+            <div class="percent">
+              <p>Porcentaje de gastos:</p>
+              <p class="box-negative">12%</p>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div>
+        <div class="data-container">
+          <div class="column">
+            <div class="title">
+              <img class="icon" src="./img/add.svg" alt="add" />
+              <p>Transacción</p>
+            </div>
+            <div class="dropdowns">
+              <form action="">
+                <label>
+                  <select required name="option" id="option">
+                    <option value="" disabled selected hidden>
+                      Ingresos | Egresos
+                    </option>
+                    <option value="ingresos">Ingresos</option>
+                    <option value="egresos">Egresos</option>
+                  </select>
+                </label>
+                <input type="text" placeholder="Descripción" />
+                <input type="number" placeholder="Monto" />
+                <input
+                  class="btn-submit box-negative"
+                  type="submit"
+                  value="Agregar"
+                />
+              </form>
+            </div>
+          </div>
+          <div class="column">
+            <nav>
+              <div class="movimientos-container">
+                <button class="tab-ingresos box-negative">Ingresos</button>
+                <button class="box-gray">Egresos</button>
+              </div>
+            </nav>
+            <div class="container-cantidad">
+              <div class="cantidad box-positive-2">
+                <p>Salario 1</p>
+                <p>+ 400.00</p>
+              </div>
+              <div class="cantidad box-positive-2">
+                <p>Salario 2</p>
+                <p>+ 400.00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
