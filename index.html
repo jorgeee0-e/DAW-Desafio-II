@@ -1,11 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+        <title>Document</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <header>
+        <div class="data">
+          <div class="title">
+<!--             <h1>Presupuesto de</h1>
+ -->            <div>
+              <h1 id="header-mes"></h1>
+            </div>
+          </div>
+          <div class="amount">
+            <h1 id="saldo"></h1>
+          </div>
+          <div class="record">
+            <div class="ingresos box-negative">
+              <p>Ingresos:</p>
+              <p id="ingresos"></p>
+            </div>
+            <div class="egresos box-positive">
+              <p>Egresos:</p>
+              <p id="egresos"></p>
+            </div>
+            <div class="percent">
+              <p>Porcentaje de gastos:</p>
+              <p id="porcentaje" class="box-negative">12%</p>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div>
+        <div class="data-container">
+          <div class="column">
+            <div class="title">
+              <img class="icon" src="./img/add.svg" alt="add" />
+              <p>Transacción</p>
+            </div>
+            <div class="dropdowns">
+              <form action="">
+                <label>
+                  <select required name="option" id="option">
+                    <option value="" disabled selected hidden>
+                      Ingresos | Egresos
+                    </option>
+                    <option value="ingresos">Ingresos</option>
+                    <option value="egresos">Egresos</option>
+                  </select>
+                </label>
+                <input id="descripcion" type="text" placeholder="Descripción" />
+                <input id="monto" type="number" placeholder="Monto" />
+<!--                 <div id="error-message" class="row">Mensaje de error</div>
+ -->                <input
+                  id="btn-add"
+                  class="btn-submit box-negative"
+                  type="submit"
+                  value="Agregar"
+                />
+              </form>
+            </div>
+          </div>
+          <div class="column">
+            <nav>
+              <div class="movimientos-container">
+                <button id="btn-ingresos" class="box-negative active">Ingresos</button>
+                <button id="btn-egresos" class="box-gray">Egresos</button>
+<!--               </div>
+              <div class="movimientos-container">
+                <button id="btn-ingresos" class="tab-ingresos box-negative">Ingresos</button>
+                <button id="btn-egresos" class="box-gray"*/ >Egresos</button>
+              </div> -->
+            </nav>
+            <div class="container-cantidad">
+              <div class="cantidad box-positive-2">
+<!--                 <p>Salario 1</p>
+                <p>+ 400.00</p> -->
+              </div>
+<!--               <div class="cantidad box-positive-2">
+                <p>Salario 2</p>
+                <p>+ 400.00</p>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script type="module" src="/js/scripts.js"></script>
+  <script src="js/nuevaTransaccion.js" ></script>
 </html>
