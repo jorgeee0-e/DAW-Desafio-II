@@ -55,8 +55,8 @@ body {
   border: solid 2px #e1e1e1;
   border-radius: 3px;
   display: flex;
-  padding: 8px;
-  justify-content: space-around;
+  padding: 8px 32px;
+  justify-content: space-between;
   font-weight: 600;
   margin-bottom: 8px;
 }
@@ -122,6 +122,7 @@ header {
   text-align: center;
   width: 50%;
   padding: 16px;
+  overflow: auto;
 }
 
 .title {
@@ -185,8 +186,6 @@ select option[value=""] {
   width: 100px;
 }
 
-
-
 /* COLUMN 2 */
 .movimientos-container {
   display: flex;
@@ -211,9 +210,22 @@ select option[value=""] {
   display: flex;
 }
 
-#error-message{
+.cantidad p {
+  text-overflow: ellipsis;
+  width: 100%;
+  overflow: hidden;
+}
+
+.cantidad p:nth-child(n + 1) {
+  text-align: left;
+}
+
+.cantidad p:nth-child(n + 2) {
+  text-align: right;
+}
+
+#error-message {
   font-size: smaller;
   color: #999999;
   text-align: left;
-
 }
